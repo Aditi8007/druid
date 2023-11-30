@@ -3,7 +3,7 @@ name: "Druid SBOM Analysis"
 on:
   push:
     branches:
-      - main
+      - druid-27.0.0_release
 
 jobs:
   analyze:
