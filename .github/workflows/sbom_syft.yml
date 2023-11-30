@@ -1,0 +1,36 @@
+name: "Druid SBOM Analysis"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  analyze:
+    name: Analyze with Syft
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Installing Syft
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b .
+          chmod +x ./syft
+
+      - name: Build Druid
+        run: |
+          # Assuming Druid uses Maven as the build tool
+          mvn clean install
+
+      - name: Generate SBOM for Binary Packages
+        run: |
+          ./syft target/ -o spdx-json=sbom-binary.json
+
+      - name: Upload SBOM artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: syft_sbom
+          path: sbom-binary.json
+          if-no-files-found: error
