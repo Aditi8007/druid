@@ -26,8 +26,8 @@ jobs:
           
       - name: Generate SBOM for Binary Packages
         run: |
-          # ./syft . -o spdx-json=sbom-binary.json
-            ./syft /d/BeSecure/Aditi8007/druid -o spdx-json=sbom-binary.json
+           ./syft . -o spdx-json=sbom-binary.json
+            
       - name: Upload SBOM artifact
         uses: actions/upload-artifact@v2
         with:
