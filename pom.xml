@@ -2018,26 +2018,7 @@
         <!-- Prevent the source-release-assembly execution defined in the Apache parent POM from running
              so we can control it ourselves -->
       <build>
-<plugins>
-<!-- Add other plugins as needed -->
- 
-        <!-- CycloneDX Maven Plugin -->
-<plugin>
-<groupId>org.cyclonedx</groupId>
-<artifactId>cyclonedx-maven-plugin</artifactId>
-<version>2.1.0</version> <!-- Use the latest version -->
-<executions>
-<execution>
-<goals>
-<goal>makeAggregateBom</goal>
-</goals>
-</execution>
-</executions>
-<configuration>
-<!-- Optional: Customize the output directory -->
-<!-- <outputDirectory>${project.build.directory}/custom-location</outputDirectory> -->
-</configuration>
-</plugin>
+
 </plugins>
 </build>
         <profile>
