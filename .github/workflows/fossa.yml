@@ -1,0 +1,36 @@
+name: FOSSA Scan
+
+on:
+  push:
+    branches:
+      - druid-27.0.0_release
+
+jobs:
+  fossa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup FOSSA CLI
+        uses: fossas/fossa-action@v1
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Build with Maven
+        run: mvn clean install -DskipTests 
+
+      - name: Run FOSSA Analysis
+        run: fossa analyze
+
+      - name: Archive FOSSA Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: fossa-report
+          path: .fossa/
+
