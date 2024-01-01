@@ -82,7 +82,7 @@
     "d3-selection": "^2.0.0",
     "echarts": "^5.4.1",
     "file-saver": "^2.0.2",
-    "follow-redirects": "^1.14.7",
+    "follow-redirects": "^1.15.4",
     "fontsource-open-sans": "^3.0.9",
     "has-own-prop": "^2.0.0",
     "hjson": "^3.2.1",
