@@ -111,7 +111,7 @@
         <slf4j.version>1.7.36</slf4j.version>
         <jna.version>5.13.0</jna.version>
         <jna-platform.version>5.13.0</jna-platform.version>
-        <hadoop.compile.version>3.3.6</hadoop.compile.version>
+        <hadoop.compile.version>3.4.1</hadoop.compile.version>
         <mockito.version>4.3.1</mockito.version>
         <aws.sdk.version>1.12.497</aws.sdk.version>
         <caffeine.version>2.8.0</caffeine.version>
@@ -144,7 +144,7 @@
              Therefore we set this empty property here.
              ref: https://github.com/mapstruct/mapstruct/pull/1241
              -->
-         <jacocoArgLine />
+         <jacocoArgLine/>
     </properties>
 
     <modules>
@@ -1643,7 +1643,7 @@
                         <trimStackTrace>false</trimStackTrace>
                         <!-- our tests are very verbose, let's keep the volume down -->
                         <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                        <forkNode implementation="org.apache.maven.plugin.surefire.extensions.SurefireForkNodeFactory" />
+                        <forkNode implementation="org.apache.maven.plugin.surefire.extensions.SurefireForkNodeFactory"/>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -1920,7 +1920,7 @@
                                 <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                                     <licenseFamilyCategory>MIT</licenseFamilyCategory>
                                     <licenseFamilyName>MIT JQuery</licenseFamilyName>
-                                    <notes />
+                                    <notes/>
                                     <patterns>
                                         <pattern>Copyright 2005, 2014 jQuery Foundation, Inc. and other contributors</pattern>
                                         <pattern>Copyright 2012 jQuery Foundation and other contributors; Licensed MIT</pattern>
@@ -1930,7 +1930,7 @@
                                 <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                                     <licenseFamilyCategory>Underscore</licenseFamilyCategory>
                                     <licenseFamilyName>Underscore</licenseFamilyName>
-                                    <notes />
+                                    <notes/>
                                     <patterns>
                                         <pattern>Underscore is freely distributable under the MIT license</pattern>
                                     </patterns>
@@ -1938,7 +1938,7 @@
                                 <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                                     <licenseFamilyCategory>Allan Jardine</licenseFamilyCategory>
                                     <licenseFamilyName>Allan Jardine</licenseFamilyName>
-                                    <notes />
+                                    <notes/>
                                     <patterns>
                                         <pattern>Copyright 2009 Allan Jardine. All Rights Reserved</pattern>
                                     </patterns>
@@ -1946,7 +1946,7 @@
                                 <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                                     <licenseFamilyCategory>Allan Jardine</licenseFamilyCategory>
                                     <licenseFamilyName>Allan Jardine</licenseFamilyName>
-                                    <notes />
+                                    <notes/>
                                     <patterns>
                                         <pattern>Copyright 2009 Allan Jardine. All Rights Reserved</pattern>
                                         <pattern>Copyright 2008-2011 Allan Jardine</pattern>
@@ -2019,7 +2019,7 @@
              so we can control it ourselves -->
       <build>
 
-</plugins>
+
 </build>
         <profile>
             <id>apache-release</id>
@@ -2097,7 +2097,7 @@
           </property>
         </activation>
         <properties>
-          <hadoop.compile.version>2.8.5</hadoop.compile.version>
+          <hadoop.compile.version>3.4.1</hadoop.compile.version>
           <hibernate-validator.version>5.2.5.Final</hibernate-validator.version>
         </properties>
       </profile>
