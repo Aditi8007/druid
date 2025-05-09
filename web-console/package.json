@@ -63,9 +63,9 @@
     "not ie 11"
   ],
   "dependencies": {
-    "@blueprintjs/core": "^4.20.1",
+    "@blueprintjs/core": "^5.0.0",
     "@blueprintjs/datetime": "^4.4.36",
-    "@blueprintjs/datetime2": "^0.9.35",
+    "@blueprintjs/datetime2": "^1.0.0",
     "@blueprintjs/icons": "^4.16.0",
     "@blueprintjs/popover2": "^1.14.9",
     "@druid-toolkit/query": "^0.20.5",
@@ -96,8 +96,8 @@
     "react-ace": "^10.1.0",
     "react-diff-viewer": "^3.1.1",
     "react-dom": "^18.2.0",
-    "react-router": "^5.3.4",
-    "react-router-dom": "^5.3.4",
+    "react-router": "^6.4.0",
+    "react-router-dom": "^6.4.0",
     "react-splitter-layout": "^4.0.0",
     "react-table": "~6.10.3",
     "regenerator-runtime": "^0.13.7",
