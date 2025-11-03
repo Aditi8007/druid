@@ -37,7 +37,7 @@
     <!-- These guava and grpc versions are used only in the opentelemetry-extension.
       Look at build section for more details about shading. -->
     <shade.guava.version>32.0.1-jre</shade.guava.version>
-    <shade.grpc.version>1.41.3</shade.grpc.version>
+    <shade.grpc.version>1.75.0</shade.grpc.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -175,7 +175,7 @@
                   so we need to relocate the class names of the implementation classes.
                   More about SPI - https://docs.oracle.com/javase/tutorial/ext/basics/spi.html.
                   https://maven.apache.org/plugins/maven-shade-plugin/examples/resource-transformers.html. -->
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
               </transformers>
               <artifactSet>
                 <includes>
